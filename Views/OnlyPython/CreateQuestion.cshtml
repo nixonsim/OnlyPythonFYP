@@ -1,0 +1,71 @@
+﻿@model OnlyPythonFYP.Models.Qnsbank
+
+@{
+
+    var QuestionType = new[]
+    {
+        new { value=1, text="MCQ"},
+        new { value=2, text="Open-Ended"},
+    };
+}
+
+<span style="color:red">@TempData["Msg"]</span>
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <tr scope="row">
+        <td width="75%">Generate a question</td>
+
+    </tr>
+</table>
+
+<div class="container">
+    <form asp-controller="OnlyPython" asp-action="CreateQuestion" method="post" class="form-horizontal" role="form">
+        
+
+        <div class="form-group row row">
+            <label class="control-label col-3" asp-for="Topic">Topic : </label>
+            <div class="col-4">
+                <input asp-for="Topic" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span asp-validation-for="Topic" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row row">
+            <label class="control-label col-3" asp-for="Question">Question : </label>
+            <div class="col-4">
+                <input asp-for="Question" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span asp-validation-for="Question" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="control-label col-3" asp-for="QuestionType">QuestionType : </label>
+            <div class="col-4">
+                @foreach (var item in QuestionType)
+                {
+                    <input type="radio" asp-for="QuestionType" value="@item.value" /> @item.text
+                }
+            </div>
+            <div class="col-3">
+                <span asp-validation-for="QuestionType" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row row">
+            <label class="control-label col-3" asp-for="Answer">Answer : </label>
+            <div class="col-4">
+                <input asp-for="Answer" class="form-control" />
+            </div>
+            <div class="col-3">
+                <span asp-validation-for="Answer" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group row">
+            <input type="submit" class="btn btn-primary" value="Create" />
+        </div>
+
+
+
+    </form>
+</div>
+

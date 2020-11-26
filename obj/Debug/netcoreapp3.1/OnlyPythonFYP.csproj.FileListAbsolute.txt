@@ -1,0 +1,156 @@
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.exe
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csprojAssemblyReference.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.AssemblyInfoInputs.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.AssemblyInfo.cs
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorTargetAssemblyInfo.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\staticwebassets\OnlyPythonFYP.StaticWebAssets.Manifest.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\staticwebassets\OnlyPythonFYP.StaticWebAssets.xml
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csproj.CoreCompileInputs.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorAssemblyInfo.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorAssemblyInfo.cs
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.deps.json
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.runtimeconfig.json
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.runtimeconfig.dev.json
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.pdb
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.Views.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\OnlyPythonFYP.Views.pdb
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.TagHelpers.input.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.TagHelpers.output.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorCoreGenerate.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorTargetAssemblyInfo.cs
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.Views.pdb
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csproj.CopyComplete
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.dll
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.pdb
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\OnlyPythonFYP.genruntimeconfig.cache
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\Razor\Views\OnlyPython\Index.cshtml.g.cs
+C:\Users\18021826\Desktop\OnlyPythonFYP-main\OnlyPythonFYP\OnlyPythonFYP\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\appsettings.Development.json
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\appsettings.json
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\libman.json
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.exe
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.deps.json
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.runtimeconfig.json
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.runtimeconfig.dev.json
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.pdb
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.Views.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\OnlyPythonFYP.Views.pdb
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csprojAssemblyReference.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.AssemblyInfoInputs.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.AssemblyInfo.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csproj.CoreCompileInputs.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.MvcApplicationPartsAssemblyInfo.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorAssemblyInfo.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorAssemblyInfo.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.TagHelpers.input.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.TagHelpers.output.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorCoreGenerate.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\Razor\Views\OnlyPython\Index.cshtml.g.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorTargetAssemblyInfo.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorTargetAssemblyInfo.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.Views.pdb
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csproj.CopyComplete
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\staticwebassets\OnlyPythonFYP.StaticWebAssets.Manifest.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\staticwebassets\OnlyPythonFYP.StaticWebAssets.xml
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.pdb
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\OnlyPythonFYP.genruntimeconfig.cache
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\Razor\Views\OnlyPython\Questions.cshtml.g.cs
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\C286\MyCode\C286ProjectsAY20S1\FYPAGAIN\obj\Debug\netcoreapp3.1\Razor\Views\OnlyPython\QuestionsBackUp.cshtml.g.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.exe
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.deps.json
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.runtimeconfig.json
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.runtimeconfig.dev.json
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.pdb
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.Views.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\OnlyPythonFYP.Views.pdb
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csprojAssemblyReference.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.AssemblyInfoInputs.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.AssemblyInfo.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csproj.CoreCompileInputs.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorAssemblyInfo.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorAssemblyInfo.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.TagHelpers.input.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.TagHelpers.output.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorCoreGenerate.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\Razor\Views\OnlyPython\Index.cshtml.g.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorTargetAssemblyInfo.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.RazorTargetAssemblyInfo.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.Views.pdb
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.csproj.CopyComplete
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\staticwebassets\OnlyPythonFYP.StaticWebAssets.Manifest.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\staticwebassets\OnlyPythonFYP.StaticWebAssets.xml
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.dll
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.pdb
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.genruntimeconfig.cache
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\Razor\Views\OnlyPython\CreateQuestion.cshtml.g.cs
