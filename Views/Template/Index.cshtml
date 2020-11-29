@@ -1,0 +1,19 @@
+﻿@model List<Qntemplate>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All Questions</h2>
+<span style="color:red">@TempData["Msg"]</span>
+<table class="table table-bordered table-condensed table-hover table-striped">
+    <tr>
+        <th scope="col" width="5%">Questions</th>
+    </tr>
+    @foreach (Qntemplate b in Model)
+    {
+        <tr scope="row">
+            <td width="40%">@b.Questions</td>
+        </tr>
+    }
+</table>
