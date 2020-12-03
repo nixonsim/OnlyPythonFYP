@@ -9,6 +9,7 @@ namespace OnlyPythonFYP.Models
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter Password")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
     }
 }

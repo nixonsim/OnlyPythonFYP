@@ -5,10 +5,12 @@ namespace OnlyPythonFYP.Models
 {
     public partial class Qnsbank
     {
-        public int QnsId { get; set; }
+        public int Qns_Id { get; set; }
         public string Topic { get; set; }
         public string Question { get; set; }
-        public int QuestionType { get; set; }
+        public int Question_Type { get; set; }
         public string Answer { get; set; }
+        public string Wrong_Answer { get; set; }
+        public int Template_Id { get; set; }
     }
 }

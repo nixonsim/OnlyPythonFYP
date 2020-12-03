@@ -6,6 +6,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using OnlyPythonFYP.Models;
 
@@ -13,37 +14,42 @@ namespace OnlyPythonFYP.Controllers
 {
     public class AccountController : Controller
     {
+        private const string AUTHSCHEME = "UserSecurity";
+        private const string LOGIN_SQL =
+           @"SELECT * FROM StdUser 
+            WHERE Email = '{0}' 
+              AND Password = HASHBYTES('SHA1', '{1}')";
 
-        public IActionResult Logoff(string returnUrl = null)
-        {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            if (Url.IsLocalUrl(returnUrl))
-                return Redirect(returnUrl);
-            return RedirectToAction("Login");
-        }
+        private const string NAME_COL = "Name";
 
+        private const string LOGIN_VIEW = "Login";
 
+        [AllowAnonymous]
         public IActionResult Login(string returnUrl = null)
         {
             TempData["ReturnUrl"] = returnUrl;
-            return View();
+            return View(LOGIN_VIEW);
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult Login(UserLogin user)
         {
-            if (!AuthenticateUser(user.Email, user.Password,
-                                  out ClaimsPrincipal principal))
+            if (!AuthenticateUser(user.Email, user.Password, out ClaimsPrincipal principal))
             {
-                ViewData["Message"] = "Incorrect Email or Password";
-                return View("Login");
+                ViewData["Message"] = "Incorrect email or Password";
+                ViewData["MsgType"] = "warning";
+                return View(LOGIN_VIEW);
             }
             else
             {
                 HttpContext.SignInAsync(
-                   CookieAuthenticationDefaults.AuthenticationScheme,
-                   principal);
+                   AUTHSCHEME,
+                   principal,
+               new AuthenticationProperties
+               {
+                   IsPersistent = false
+               });
 
                 if (TempData["returnUrl"] != null)
                 {
@@ -52,32 +58,48 @@ namespace OnlyPythonFYP.Controllers
                         return Redirect(returnUrl);
                 }
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "OnlyPython");
             }
         }
 
-        private bool AuthenticateUser(string uid, string pw,
+
+        public IActionResult Logoff(string returnUrl = null)
+        {
+            HttpContext.SignOutAsync(AUTHSCHEME);
+            if (Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
+            return RedirectToAction();
+        }
+
+        [AllowAnonymous]
+        public IActionResult Forbidden()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult StudLogin()
+        {
+            return View();
+        }
+
+        private bool AuthenticateUser(string email, string pw,
                                       out ClaimsPrincipal principal)
         {
             principal = null;
 
-            // TODO L08 Task 1 - Provide Login SELECT Statement
-            string sql = @"Select * from SRUser
-                        where Email='{0}' and 
-                        Password = HASHBYTES('SHA1','{1}')";
 
-            string select = String.Format(sql, uid, pw);
-            DataTable ds = DBUtl.GetTable(select);
+            DataTable ds = DBUtl.GetTable(LOGIN_SQL, email, pw);
             if (ds.Rows.Count == 1)
             {
                 principal =
                    new ClaimsPrincipal(
                       new ClaimsIdentity(
                          new Claim[] {
-                        new Claim(ClaimTypes.NameIdentifier, uid),
-                        new Claim(ClaimTypes.Name, ds.Rows[0]["Email"].ToString())
-                         },
-                         CookieAuthenticationDefaults.AuthenticationScheme));
+                        new Claim(ClaimTypes.NameIdentifier, ds.Rows[0]["Id"].ToString()),
+                        new Claim(ClaimTypes.Name, ds.Rows[0][NAME_COL].ToString()) }
+                      )
+                   );
                 return true;
             }
             return false;

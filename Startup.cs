@@ -45,7 +45,13 @@ namespace OnlyPythonFYP
             }
             app.UseStaticFiles();
             app.UseAuthentication();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(
+               routes =>
+               {
+                   routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Account}/{action=Login}/{id?}");
+               });
         }
     }
 }

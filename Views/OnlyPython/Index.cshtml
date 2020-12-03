@@ -21,15 +21,17 @@
 <table class="table table-bordered table-condensed table-hover table-striped">
     <tr>
         <th scope="col" width="20%">Question ID</th>
-        <th scope="col" width="40%">Question</th>
-        <th scope="col" width="40%">QuestionType</th>
+        <th scope="col" width="20%">Question</th>
+        <th scope="col" width="20%">QuestionType</th>
+        <th scope="col" wifth="20%">Topic</th>
     </tr>
     @foreach (Qnsbank b in Model)
     {
         <tr scope="row">
-            <td width="20%">@b.QnsId</td>
+            <td width="20%">@b.Qns_Id</td>
             <td width="40%">@b.Question</td>
-            <td width="40%">@b.QuestionType</td>
+            <td width="40%">@b.Question_Type</td>
+            <td width="40%">@b.Topic</td>
         </tr>
     }
 </table>

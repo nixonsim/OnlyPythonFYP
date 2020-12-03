@@ -104,11 +104,11 @@ namespace OnlyPythonFYP.Models
 
             modelBuilder.Entity<Qnsbank>(entity =>
             {
-                entity.HasKey(e => e.QnsId);
+                entity.HasKey(e => e.Qns_Id);
 
                 entity.ToTable("QNSBank");
 
-                entity.Property(e => e.QnsId).HasColumnName("Qns_Id");
+                entity.Property(e => e.Qns_Id).HasColumnName("Qns_Id");
 
                 entity.Property(e => e.Answer)
                     .IsRequired()
@@ -120,9 +120,14 @@ namespace OnlyPythonFYP.Models
                     .HasMaxLength(225)
                     .IsUnicode(false);
 
-                entity.Property(e => e.QuestionType).HasColumnName("Question_Type");
+                entity.Property(e => e.Question_Type).HasColumnName("Question_Type");
 
                 entity.Property(e => e.Topic)
+                    .IsRequired()
+                    .HasMaxLength(225)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Wrong_Answer)
                     .IsRequired()
                     .HasMaxLength(225)
                     .IsUnicode(false);
@@ -130,11 +135,13 @@ namespace OnlyPythonFYP.Models
 
             modelBuilder.Entity<Qntemplate>(entity =>
             {
+                entity.HasKey(e => e.Template_Id);
+
                 entity.ToTable("QNTemplate");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
+                entity.Property(e => e.Template_Id).ValueGeneratedNever();
 
-                entity.Property(e => e.Questions)
+                entity.Property(e => e.Template_Question)
                     .IsRequired()
                     .HasMaxLength(225)
                     .IsUnicode(false);

@@ -154,3 +154,4 @@ C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1
 C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.pdb
 C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\OnlyPythonFYP.genruntimeconfig.cache
 C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\Razor\Views\OnlyPython\CreateQuestion.cshtml.g.cs
+C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\obj\Debug\netcoreapp3.1\Razor\Views\Template\Index.cshtml.g.cs
