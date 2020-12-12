@@ -1,4 +1,4 @@
-﻿@model List<Qnsbank>
+﻿@model Qnsbank
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -25,15 +25,7 @@
         <th scope="col" width="20%">QuestionType</th>
         <th scope="col" wifth="20%">Topic</th>
     </tr>
-    @foreach (Qnsbank b in Model)
-    {
-        <tr scope="row">
-            <td width="20%">@b.Qns_Id</td>
-            <td width="40%">@b.Question</td>
-            <td width="40%">@b.Question_Type</td>
-            <td width="40%">@b.Topic</td>
-        </tr>
-    }
+    
 </table>
 
 

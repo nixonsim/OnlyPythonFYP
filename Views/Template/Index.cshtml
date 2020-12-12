@@ -1,4 +1,4 @@
-﻿@model List<Qntemplate>
+﻿@model Qntemplate
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -10,10 +10,5 @@
     <tr>
         <th scope="col" width="5%">Template_Question</th>
     </tr>
-    @foreach (Qntemplate b in Model)
-    {
-        <tr scope="row">
-            <td width="40%">@b.Template_Question</td>
-        </tr>
-    }
+    
 </table>

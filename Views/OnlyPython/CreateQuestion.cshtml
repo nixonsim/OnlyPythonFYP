@@ -1,4 +1,4 @@
-﻿@model OnlyPythonFYP.Models.Qnsbank
+﻿@model Qnsbank
 
 @{
 
@@ -40,15 +40,15 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="control-label col-3" asp-for="Question_Type">QuestionType : </label>
+            <label class="control-label col-3" asp-for="QuestionType">QuestionType : </label>
             <div class="col-4">
                 @foreach (var item in QuestionType)
                 {
-                    <input type="radio" asp-for="Question_Type" value="@item.value" /> @item.text
+                    <input type="radio" asp-for="QuestionType" value="@item.value" /> @item.text
                 }
             </div>
             <div class="col-3">
-                <span asp-validation-for="Question_Type" class="text-danger"></span>
+                <span asp-validation-for="QuestionType" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row row">
@@ -61,12 +61,12 @@
             </div>
         </div>
         <div class="form-group row row">
-            <label class="control-label col-3" asp-for="Wrong_Answer">Wrong Answer : </label>
+            <label class="control-label col-3" asp-for="WrongAnswer">Wrong Answer : </label>
             <div class="col-4">
-                <input asp-for="Wrong_Answer" class="form-control" />
+                <input asp-for="WrongAnswer" class="form-control" />
             </div>
             <div class="col-3">
-                <span asp-validation-for="Wrong_Answer" class="text-danger"></span>
+                <span asp-validation-for="WrongAnswer" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group row">

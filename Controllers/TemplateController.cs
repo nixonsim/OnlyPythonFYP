@@ -101,17 +101,7 @@ namespace OnlyPythonFYP.Controllers
             return RedirectToAction();
         }
 
-        public IActionResult Temp()
-        {
-            DbSet<Qntemplate> dbs = _dbContext.Qntemplate;
 
-            Qntemplate qntemp = dbs.Where(mo => mo.Template_Id == 1)
-                                 .FirstOrDefault();
-
-            
-
-            return View(qntemp);
-        }
     }
 }
 
