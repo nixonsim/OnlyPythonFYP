@@ -26,13 +26,14 @@ using OnlyPythonFYP.Models;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3a9108af4361a6f026e4922a18f93c9c2d901e68", @"/Views/OnlyPython/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ac9e5af40ae47b8d7aaae8487cb7227d86353340", @"/Views/OnlyPython/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"700859b778482795f1502a6e3d98ae1df827cbff", @"/Views/_ViewImports.cshtml")]
-    public class Views_OnlyPython_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Qnsbank>>
+    public class Views_OnlyPython_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+            WriteLiteral("\r\n");
 #nullable restore
 #line 2 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\OnlyPython\Index.cshtml"
   
@@ -81,7 +82,7 @@ using OnlyPythonFYP.Models;
     </tr>
 ");
 #nullable restore
-#line 28 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\OnlyPython\Index.cshtml"
+#line 27 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\OnlyPython\Index.cshtml"
      foreach (Qnsbank b in Model)
     {
 
@@ -90,15 +91,15 @@ using OnlyPythonFYP.Models;
 #nullable disable
             WriteLiteral("        <tr scope=\"row\">\r\n            <td width=\"20%\">");
 #nullable restore
-#line 31 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\OnlyPython\Index.cshtml"
-                       Write(b.Qns_Id);
+#line 30 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\OnlyPython\Index.cshtml"
+                       Write(b.QnsId);
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n            <td width=\"40%\">");
 #nullable restore
-#line 32 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\OnlyPython\Index.cshtml"
+#line 31 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\OnlyPython\Index.cshtml"
                        Write(b.Question);
 
 #line default
@@ -106,29 +107,18 @@ using OnlyPythonFYP.Models;
 #nullable disable
             WriteLiteral("</td>\r\n            <td width=\"40%\">");
 #nullable restore
-#line 33 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\OnlyPython\Index.cshtml"
-                       Write(b.Question_Type);
-
-#line default
-#line hidden
-#nullable disable
-            WriteLiteral("</td>\r\n            <td width=\"40%\">");
-#nullable restore
-#line 34 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\OnlyPython\Index.cshtml"
-                       Write(b.Topic);
+#line 32 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\OnlyPython\Index.cshtml"
+                       Write(b.QuestionType);
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n        </tr>\r\n");
 #nullable restore
-#line 36 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\OnlyPython\Index.cshtml"
+#line 34 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\OnlyPython\Index.cshtml"
     }
 
-#line default
-#line hidden
-#nullable disable
-            WriteLiteral("</table>\r\n\r\n\r\n\r\n");
+");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
@@ -140,7 +130,7 @@ using OnlyPythonFYP.Models;
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<Qnsbank>> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<dynamic> Html { get; private set; }
     }
 }
 #pragma warning restore 1591

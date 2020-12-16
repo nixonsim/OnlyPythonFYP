@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>ONLYPYTHON</title>
 
+
     <!-- style sheets references -->
     <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -15,31 +16,43 @@
     <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="~/lib/jquery/jquery.validate.min.js"></script>
     <script src="~/lib/jquery/jquery.validate.unobtrusive.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     @RenderSection("ScriptSection", false)
 </head>
 <body>
     <div class="row">
-        <div class="w3-bar w3-wide w3-padding w3-card" style="background-color: #fef3d3" role="navigation">
-            <a class="w3-bar-item w3-button" asp-action="Index" asp-controller="Home"><b>ONLY</b> Python</a>
-
-            @if (User.Identity.IsAuthenticated)
-            {
-                if (User.IsInRole("Lecturer"))
-                {
-                    <a class="w3-bar-item w3-button" asp-action="Index" asp-controller="Home"><b>LECT EXAMPLE</b></a>
-                }
-                else
-                {
-                    <a class="w3-bar-item w3-button" asp-action="Index" asp-controller="Home"><b>STUD EXAMPLE</b></a>
-                }
-            }
-
+        <div class="col-1">
         </div>
-        <div class="w3-content w3-padding" style="max-width:1564px">
-            <br />
-            <div class="w3-container w3-padding-32">
-                <div class="row">
+        <div class="col-10">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg col-12" style="background-color:aliceblue" role="navigation">
+                    <div>
+                        <ul class="nav navbar-nav">
+                           
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="OnlyPython" asp-action="Index">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="OnlyPython" asp-action="CreateQuestion">Create a Question</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="OnlyPython" asp-action="ViewBookingsByPackage">Exercises</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" asp-controller="Account" asp-action="Logoff" asp-route-returnUrl="OnlyPython">Logout</a>
+                                </li>
+                            
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="col-10">
                     @RenderBody()
                 </div>
             </div>

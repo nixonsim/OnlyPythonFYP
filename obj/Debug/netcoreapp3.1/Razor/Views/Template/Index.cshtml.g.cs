@@ -26,13 +26,14 @@ using OnlyPythonFYP.Models;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9b220b4d1f7a89f2ac3fd4387e65dc7b9a3476ce", @"/Views/Template/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"6ebacb850237230b1712302f9da5770bac974814", @"/Views/Template/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"700859b778482795f1502a6e3d98ae1df827cbff", @"/Views/_ViewImports.cshtml")]
-    public class Views_Template_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<List<Qntemplate>>
+    public class Views_Template_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
+            WriteLiteral("\r\n");
 #nullable restore
 #line 2 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\Template\Index.cshtml"
   
@@ -50,9 +51,9 @@ using OnlyPythonFYP.Models;
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</span>\r\n<table class=\"table table-bordered table-condensed table-hover table-striped\">\r\n    <tr>\r\n        <th scope=\"col\" width=\"5%\">Template_Question</th>\r\n    </tr>\r\n");
+            WriteLiteral("</span>\r\n<table class=\"table table-bordered table-condensed table-hover table-striped\">\r\n    <tr>\r\n        <th scope=\"col\" width=\"5%\">Questions</th>\r\n    </tr>\r\n");
 #nullable restore
-#line 13 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\Template\Index.cshtml"
+#line 13 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\Template\Index.cshtml"
      foreach (Qntemplate b in Model)
     {
 
@@ -61,21 +62,21 @@ using OnlyPythonFYP.Models;
 #nullable disable
             WriteLiteral("        <tr scope=\"row\">\r\n            <td width=\"40%\">");
 #nullable restore
-#line 16 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\Template\Index.cshtml"
-                       Write(b.Template_Question);
+#line 16 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\Template\Index.cshtml"
+                       Write(b.Questions);
 
 #line default
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n        </tr>\r\n");
 #nullable restore
-#line 18 "C:\Users\18021826\Desktop\FYP\myNoods2 (2)\myNoods2\Views\Template\Index.cshtml"
+#line 18 "C:\Users\18037956\Documents\RP Year 3 Sem 2\FYP\myNoods2\Views\Template\Index.cshtml"
     }
 
 #line default
 #line hidden
 #nullable disable
-            WriteLiteral("</table>\r\n");
+            WriteLiteral("</table>\r\n\r\n\r\n\r\n");
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
@@ -87,7 +88,7 @@ using OnlyPythonFYP.Models;
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
         public global::Microsoft.AspNetCore.Mvc.Rendering.IJsonHelper Json { get; private set; }
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]
-        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<List<Qntemplate>> Html { get; private set; }
+        public global::Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper<dynamic> Html { get; private set; }
     }
 }
 #pragma warning restore 1591
