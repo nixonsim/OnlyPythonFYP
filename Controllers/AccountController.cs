@@ -42,7 +42,7 @@ namespace OnlyPythonFYP.Controllers
             _dbContext = dbContext;
         }
 
-        //LECTURER LOGIN
+
         [AllowAnonymous]
         public IActionResult LecLogin(string returnUrl = null)
         {
@@ -83,7 +83,7 @@ namespace OnlyPythonFYP.Controllers
             }
         }
 
-        //STUDENT LOGIN
+
         [AllowAnonymous]
         public IActionResult StudLogin(string returnUrl = null)
         {
@@ -166,7 +166,7 @@ namespace OnlyPythonFYP.Controllers
             }
             return false;
         }
-
+        /*
         public IActionResult CheckIfStud(string email)
         {
             Regex rx = new Regex(@"180\d{5}@myrp.edu.sg", RegexOptions.Compiled | RegexOptions.IgnoreCase);
@@ -177,6 +177,7 @@ namespace OnlyPythonFYP.Controllers
             }
             return Json(true);
         }
+        */
 
     }
 }

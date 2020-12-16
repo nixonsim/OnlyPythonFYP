@@ -9,7 +9,7 @@ namespace OnlyPythonFYP.Models
     public class LecLoginUser
     {
         [Required(ErrorMessage = "Please enter Email")]
-        [RegularExpression(@"([a-zA-Z_\-\.]+)@rp.edu.sg", ErrorMessage ="You are not a lecturer! Return back to main page.")]
+        [RegularExpression(@"180\d{5}@myrp.edu.sg", ErrorMessage = "You are not a lecturer! Return back to main page.")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter Password")]

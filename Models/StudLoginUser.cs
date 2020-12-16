@@ -10,7 +10,7 @@ namespace OnlyPythonFYP.Models
     public class StudLoginUser
     {
         [Required(ErrorMessage = "Please enter Email")]
-        [Remote(action: "CheckIfStud", controller: "Account")]
+        [RegularExpression(@"([a-zA-Z_\-\.]+)@rp.edu.sg", ErrorMessage = "You are not a student! Return back to main page.")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter Password")]
