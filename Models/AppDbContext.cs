@@ -16,12 +16,12 @@ namespace OnlyPythonFYP.Models
         }
 
         public virtual DbSet<Class> Class { get; set; }
-        public virtual DbSet<LecUser> LecUser { get; set; }
-        public virtual DbSet<Mcqchoices> Mcqchoices { get; set; }
+        public virtual DbSet<ExerPaper> ExerPaper { get; set; }
+        public virtual DbSet<Opuser> Opuser { get; set; }
         public virtual DbSet<Qnsbank> Qnsbank { get; set; }
         public virtual DbSet<Qntemplate> Qntemplate { get; set; }
-        public virtual DbSet<StdAnswer> StdAnswer { get; set; }
-        public virtual DbSet<StdUser> StdUser { get; set; }
+
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -29,43 +29,70 @@ namespace OnlyPythonFYP.Models
             {
                 entity.Property(e => e.ClassId).HasColumnName("Class_Id");
 
-                entity.Property(e => e.LecId).HasColumnName("Lec_Id");
+                entity.Property(e => e.ClassName)
+                    .IsRequired()
+                    .HasColumnName("Class_Name")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
 
-                entity.Property(e => e.StdId).HasColumnName("Std_Id");
+                entity.Property(e => e.OpId).HasColumnName("OP_Id");
 
-                entity.HasOne(d => d.Lec)
+                entity.HasOne(d => d.Op)
                     .WithMany(p => p.Class)
-                    .HasForeignKey(d => d.LecId)
+                    .HasForeignKey(d => d.OpId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_LecUser_ToClass");
-
-                entity.HasOne(d => d.Std)
-                    .WithMany(p => p.Class)
-                    .HasForeignKey(d => d.StdId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_StdUser_ToClass");
+                    .HasConstraintName("FK_Class_ToOPUser");
             });
 
-            modelBuilder.Entity<LecUser>(entity =>
+            modelBuilder.Entity<ExerPaper>(entity =>
             {
-                entity.HasKey(e => e.LecId)
-                    .HasName("PK__LecUser__2E5B8E707214ECD7");
-
-                entity.HasIndex(e => e.Email)
-                    .HasName("AK_LecUser_Email")
+                entity.HasIndex(e => e.ExerId)
+                    .HasName("AK_ExerPaper_ExerId")
                     .IsUnique();
 
-                entity.Property(e => e.LecId).HasColumnName("Lec_Id");
+                entity.Property(e => e.ClassId).HasColumnName("Class_Id");
 
-                entity.Property(e => e.ClassId)
+                entity.Property(e => e.CreatedBy).HasColumnName("Created_By");
+
+                entity.Property(e => e.ExerId).HasColumnName("Exer_Id");
+
+                entity.Property(e => e.ExerName)
                     .IsRequired()
-                    .HasColumnName("Class_Id")
-                    .HasMaxLength(20)
+                    .HasMaxLength(250)
                     .IsUnicode(false);
+
+                entity.Property(e => e.QnsId).HasColumnName("Qns_Id");
+
+                entity.HasOne(d => d.Class)
+                    .WithMany(p => p.ExerPaper)
+                    .HasForeignKey(d => d.ClassId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ExerPaper_ToClass");
+
+                entity.HasOne(d => d.CreatedByNavigation)
+                    .WithMany(p => p.ExerPaper)
+                    .HasForeignKey(d => d.CreatedBy)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ExerPaper_ToOPUser");
+
+                entity.HasOne(d => d.Qns)
+                    .WithMany(p => p.ExerPaper)
+                    .HasForeignKey(d => d.QnsId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_ExerPaper_ToQNSBank");
+            });
+
+            modelBuilder.Entity<Opuser>(entity =>
+            {
+                entity.ToTable("OPUser");
+
+                entity.HasIndex(e => e.Email)
+                    .HasName("AK_OPUser_Email")
+                    .IsUnique();
 
                 entity.Property(e => e.Email)
                     .IsRequired()
-                    .HasMaxLength(20)
+                    .HasMaxLength(30)
                     .IsUnicode(false);
 
                 entity.Property(e => e.LastLogin).HasColumnType("datetime");
@@ -76,44 +103,23 @@ namespace OnlyPythonFYP.Models
                     .IsUnicode(false);
 
                 entity.Property(e => e.Password).HasMaxLength(50);
-            });
 
-            modelBuilder.Entity<Mcqchoices>(entity =>
-            {
-                entity.HasKey(e => e.ChoiceId);
-
-                entity.ToTable("MCQChoices");
-
-                entity.Property(e => e.ChoiceId).HasColumnName("Choice_Id");
-
-                entity.Property(e => e.Choices)
-                    .IsRequired()
-                    .HasMaxLength(225)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.IsCorrect)
-                    .IsRequired()
-                    .HasColumnName("Is_Correct")
-                    .HasMaxLength(225)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.QuestionId).HasColumnName("Question_Id");
-
-                entity.Property(e => e.QuestionType).HasColumnName("Question_Type");
+                entity.Property(e => e.Role)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("('student')");
             });
 
             modelBuilder.Entity<Qnsbank>(entity =>
             {
-                entity.HasKey(e => e.QnsId);
-
                 entity.ToTable("QNSBank");
-
-                entity.Property(e => e.QnsId).HasColumnName("Qns_Id");
 
                 entity.Property(e => e.Answer)
                     .IsRequired()
                     .HasMaxLength(225)
                     .IsUnicode(false);
+
+                entity.Property(e => e.IsActive).HasColumnName("Is_Active");
 
                 entity.Property(e => e.Question)
                     .IsRequired()
@@ -122,77 +128,44 @@ namespace OnlyPythonFYP.Models
 
                 entity.Property(e => e.QuestionType).HasColumnName("Question_Type");
 
+                entity.Property(e => e.TemplateId).HasColumnName("Template_Id");
+
                 entity.Property(e => e.Topic)
                     .IsRequired()
                     .HasMaxLength(225)
                     .IsUnicode(false);
+
+                entity.Property(e => e.WrongAnswer)
+                    .IsRequired()
+                    .HasColumnName("Wrong_Answer")
+                    .HasMaxLength(225)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Template)
+                    .WithMany(p => p.Qnsbank)
+                    .HasForeignKey(d => d.TemplateId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_QNSBank_ToQNTemplate");
             });
 
             modelBuilder.Entity<Qntemplate>(entity =>
             {
                 entity.ToTable("QNTemplate");
 
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
-                entity.Property(e => e.Questions)
-                    .IsRequired()
-                    .HasMaxLength(225)
-                    .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<StdAnswer>(entity =>
-            {
-                entity.HasKey(e => e.AnsId)
-                    .HasName("PK_Std_AnswerMCQ");
-
-                entity.ToTable("Std_Answer");
-
-                entity.Property(e => e.AnsId).HasColumnName("Ans_Id");
-
-                entity.Property(e => e.Choice)
-                    .IsRequired()
-                    .HasMaxLength(225)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.MarksAwarded).HasColumnName("Marks_Awarded");
-
-                entity.Property(e => e.QuestionId).HasColumnName("Question_Id");
-
                 entity.Property(e => e.QuestionType).HasColumnName("Question_Type");
 
-                entity.Property(e => e.StdId).HasColumnName("Std_Id");
-            });
-
-            modelBuilder.Entity<StdUser>(entity =>
-            {
-                entity.HasKey(e => e.StdId)
-                    .HasName("PK__StdUser__FE2B448EA61C3450");
-
-                entity.HasIndex(e => e.Email)
-                    .HasName("AK_StdUser_Email")
-                    .IsUnique();
-
-                entity.Property(e => e.StdId).HasColumnName("Std_Id");
-
-                entity.Property(e => e.ClassId)
+                entity.Property(e => e.TemplateQuestion)
                     .IsRequired()
-                    .HasColumnName("Class_Id")
-                    .HasMaxLength(20)
+                    .HasColumnName("Template_Question")
                     .IsUnicode(false);
 
-                entity.Property(e => e.Email)
+                entity.Property(e => e.Topic)
                     .IsRequired()
-                    .HasMaxLength(20)
                     .IsUnicode(false);
 
-                entity.Property(e => e.LastLogin).HasColumnType("datetime");
-
-                entity.Property(e => e.Name)
+                entity.Property(e => e.Variables)
                     .IsRequired()
-                    .HasMaxLength(50)
                     .IsUnicode(false);
-
-                entity.Property(e => e.Password).HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

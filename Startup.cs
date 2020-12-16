@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.EntityFrameworkCore;
-using OnlyPythonFYP.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using OnlyPythonFYP.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace OnlyPythonFYP
 {
@@ -25,15 +25,20 @@ namespace OnlyPythonFYP
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDbContext>(
-              options =>
-                options
-                  .UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddMvc(options => options.EnableEndpointRouting = false);
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                    .AddCookie(options => { options.LoginPath = "/Account/Login/"; });
+            services.AddDbContext<AppDbContext>(
+                  options =>
+                     options
+                        .UseSqlServer(
+                             Configuration.GetConnectionString("DefaultConnection")));
+            services
+                  .AddAuthentication("UserSecurity")
+                  .AddCookie("UserSecurity",
+                     options =>
+                     {
+                         options.LoginPath = "/Home/Index/";
+                         options.AccessDeniedPath = "/Account/Forbidden/";
+                     });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,9 +48,16 @@ namespace OnlyPythonFYP
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseStaticFiles();
             app.UseAuthentication();
-            app.UseMvcWithDefaultRoute();
+            app.UseMvc(
+               routes =>
+               {
+                   routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+               });
         }
     }
 }

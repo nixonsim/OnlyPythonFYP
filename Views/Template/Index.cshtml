@@ -8,12 +8,12 @@
 <span style="color:red">@TempData["Msg"]</span>
 <table class="table table-bordered table-condensed table-hover table-striped">
     <tr>
-        <th scope="col" width="5%">Questions</th>
+        <th scope="col" width="5%">Template_Question</th>
     </tr>
     @foreach (Qntemplate b in Model)
     {
         <tr scope="row">
-            <td width="40%">@b.Questions</td>
+            <td width="40%">@b.Template_Question</td>
         </tr>
     }
 </table>

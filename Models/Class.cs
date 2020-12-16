@@ -5,11 +5,17 @@ namespace OnlyPythonFYP.Models
 {
     public partial class Class
     {
-        public int ClassId { get; set; }
-        public int StdId { get; set; }
-        public int LecId { get; set; }
+        public Class()
+        {
+            ExerPaper = new HashSet<ExerPaper>();
+        }
 
-        public virtual LecUser Lec { get; set; }
-        public virtual StdUser Std { get; set; }
+        public int Id { get; set; }
+        public int ClassId { get; set; }
+        public string ClassName { get; set; }
+        public int OpId { get; set; }
+
+        public virtual Opuser Op { get; set; }
+        public virtual ICollection<ExerPaper> ExerPaper { get; set; }
     }
 }
