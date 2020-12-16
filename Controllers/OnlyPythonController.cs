@@ -19,12 +19,18 @@ namespace OnlyPythonFYP.Controllers
     {
         private AppDbContext _dbContext;
 
+        [Authorize]
+        public IActionResult Index()
+        {
+            return View();
+        }
+
         public OnlyPythonController(AppDbContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public IActionResult Index()
+        public IActionResult QuestionList()
         {
             DbSet<Qnsbank> dbs = _dbContext.Qnsbank;
             List<Qnsbank> model = dbs.ToList();
@@ -57,7 +63,7 @@ namespace OnlyPythonFYP.Controllers
             else
                 TempData["Msg"] = "Invalid information entered";
 
-            return RedirectToAction("Index");
+            return RedirectToAction("QuestionList");
         }
 
     }

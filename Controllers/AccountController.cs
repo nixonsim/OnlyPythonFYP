@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Data;
@@ -16,20 +15,80 @@ namespace OnlyPythonFYP.Controllers
 {
     public class AccountController : Controller
     {
+        private const string AUTHSCHEME = "UserSecurity";
+        private const string LOGIN_SQL =
+           @"SELECT * FROM OPUser 
+            WHERE Id = '{0}' 
+              AND Password = HASHBYTES('SHA1', '{1}')";
 
-        public IActionResult Logoff(string returnUrl = null)
+        private const string LASTLOGIN_SQL =
+           @"UPDATE OPUser SET LastLogin=GETDATE() 
+                        WHERE Id='{0}'";
+
+        private const string ROLE_COL = "Role";
+        private const string NAME_COL = "Name";
+
+        private const string REDIRECT_CNTR = "OnlyPython";
+        private const string REDIRECT_ACTN = "Index";
+
+        private const string LECLOGIN_VIEW = "LecLogin";
+        private const string STUDLOGIN_VIEW = "StudLogin";
+
+
+        private AppDbContext _dbContext;
+
+        public AccountController(AppDbContext dbContext)
         {
-            HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            if (Url.IsLocalUrl(returnUrl))
-                return Redirect(returnUrl);
-            return RedirectToAction("Login");
+            _dbContext = dbContext;
         }
 
-
-        public IActionResult Login(string returnUrl = null)
+        //LECTURER LOGIN
+        [AllowAnonymous]
+        public IActionResult LecLogin(string returnUrl = null)
         {
             TempData["ReturnUrl"] = returnUrl;
-            return View();
+            return View(LECLOGIN_VIEW);
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult LecLogin(LecLoginUser user)
+        {
+            if (!AuthenticateUser(user.Email, user.Password, out ClaimsPrincipal principal))
+            {
+                ViewData["Message"] = "Incorrect Email or Password";
+                ViewData["MsgType"] = "warning";
+                return View(LECLOGIN_VIEW);
+            }
+            else
+            {
+                HttpContext.SignInAsync(
+                   AUTHSCHEME,
+                   principal,
+               new AuthenticationProperties
+               {
+                   IsPersistent = false
+               });
+
+                int num_affected = _dbContext.Database.ExecuteSqlInterpolated($"UPDATE OPUser SET LastLogin=GETDATE() WHERE Email = {user.Email}");
+
+                if (TempData["returnUrl"] != null)
+                {
+                    string returnUrl = TempData["returnUrl"].ToString();
+                    if (Url.IsLocalUrl(returnUrl))
+                        return Redirect(returnUrl);
+                }
+
+                return RedirectToAction(REDIRECT_ACTN, REDIRECT_CNTR);
+            }
+        }
+
+        //STUDENT LOGIN
+        [AllowAnonymous]
+        public IActionResult StudLogin(string returnUrl = null)
+        {
+            TempData["ReturnUrl"] = returnUrl;
+            return View(STUDLOGIN_VIEW);
         }
 
         [AllowAnonymous]
@@ -39,13 +98,20 @@ namespace OnlyPythonFYP.Controllers
             if (!AuthenticateUser(user.Email, user.Password, out ClaimsPrincipal principal))
             {
                 ViewData["Message"] = "Incorrect Email or Password";
-                return View("Login");
+                ViewData["MsgType"] = "warning";
+                return View(STUDLOGIN_VIEW);
             }
             else
             {
                 HttpContext.SignInAsync(
-                   CookieAuthenticationDefaults.AuthenticationScheme,
-                   principal);
+                   AUTHSCHEME,
+                   principal,
+               new AuthenticationProperties
+               {
+                   IsPersistent = false
+               });
+
+                int num_affected = _dbContext.Database.ExecuteSqlInterpolated($"UPDATE OPUser SET LastLogin=GETDATE() WHERE Email = {user.Email}");
 
                 if (TempData["returnUrl"] != null)
                 {
@@ -54,12 +120,27 @@ namespace OnlyPythonFYP.Controllers
                         return Redirect(returnUrl);
                 }
 
-                return RedirectToAction("Index");
+                return RedirectToAction(REDIRECT_ACTN, REDIRECT_CNTR);
             }
         }
 
-        private bool AuthenticateUser(string uid, string pw,
-                                      out ClaimsPrincipal principal)
+
+        [Authorize]
+        public IActionResult Logoff(string returnUrl = null)
+        {
+            HttpContext.SignOutAsync(AUTHSCHEME);
+            if (Url.IsLocalUrl(returnUrl))
+                return Redirect(returnUrl);
+            return RedirectToAction(REDIRECT_ACTN, REDIRECT_CNTR);
+        }
+
+        [AllowAnonymous]
+        public IActionResult Forbidden()
+        {
+            return View();
+        }
+
+        private bool AuthenticateUser(string email, string pw, out ClaimsPrincipal principal)
         {
 
             DbSet<Opuser> dbs = _dbContext.Opuser;
@@ -69,23 +150,18 @@ namespace OnlyPythonFYP.Controllers
 
             principal = null;
 
-            // TODO L08 Task 1 - Provide Login SELECT Statement
-            string sql = @"Select * from SRUser
-                        where Email='{0}' and 
-                        Password = HASHBYTES('SHA1','{1}')";
-
-            string select = String.Format(sql, uid, pw);
-            DataTable ds = DBUtl.GetTable(select);
-            if (ds.Rows.Count == 1)
+            if (appUser != null)
             {
                 principal =
                    new ClaimsPrincipal(
                       new ClaimsIdentity(
                          new Claim[] {
-                        new Claim(ClaimTypes.NameIdentifier, uid),
-                        new Claim(ClaimTypes.Name, ds.Rows[0]["Email"].ToString())
-                         },
-                         CookieAuthenticationDefaults.AuthenticationScheme));
+                        new Claim(ClaimTypes.NameIdentifier, appUser.Email),
+                        new Claim(ClaimTypes.Name, appUser.Name),
+                        new Claim(ClaimTypes.Role, appUser.Role)
+                         }, "Basic"
+                      )
+                   );
                 return true;
             }
             return false;
