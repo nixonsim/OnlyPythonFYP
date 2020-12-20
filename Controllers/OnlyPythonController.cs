@@ -7,8 +7,6 @@ using System.Dynamic;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Claims;
-// TODO Lesson03 1-1: import namespaces Lesson03.Models and Microsoft.EntityFrameworkCore
-// Un-comment the following two lines:
 using OnlyPythonFYP.Models;
 using Microsoft.EntityFrameworkCore;
 

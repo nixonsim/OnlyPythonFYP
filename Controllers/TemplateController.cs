@@ -33,7 +33,7 @@ namespace OnlyPythonFYP.Controllers
         {
             DbSet<Qntemplate> dbs = _dbContext.Qntemplate;
 
-            Qntemplate qntemp = dbs.Where(mo => mo.Template_Id == id)
+            Qntemplate qntemp = dbs.Where(mo => mo.Id == id)
                                  .FirstOrDefault();
 
             return View(qntemp);
@@ -89,10 +89,10 @@ namespace OnlyPythonFYP.Controllers
                 Qnsbank qB = new Qnsbank();
                 qB.Topic = newTopic;
                 qB.Question = newQuestion;
-                qB.Question_Type = newQuestion_Type;
+                qB.QuestionType = newQuestion_Type;
                 qB.Answer = newAnswer;
-                qB.Wrong_Answer = NewWrong_Answer;
-                qB.Template_Id = idCounter;
+                qB.WrongAnswer = NewWrong_Answer;
+                qB.Id = idCounter;
 
                 _dbContext.Qnsbank.Add(qB);
                 _dbContext.SaveChanges();
@@ -100,6 +100,8 @@ namespace OnlyPythonFYP.Controllers
 
             return RedirectToAction();
         }
+
+
 
 
     }
