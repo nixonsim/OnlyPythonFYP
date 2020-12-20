@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+    .button2 {
+        background-color: #d1b4cf; /*lect purple*/
+    }
+
+    .button3 {
+        background-color: #a1bdc3; /*stud green*/
+    }
+</style>
+
+<div class="w3-row-padding w3-padding-64 w3-container">
+    <h2>Hi! Welcome to OnlyPython!</h2>
+
+    <div class="w3-content w3-center">
+
+        <a asp-action="StudLogin" asp-controller="Account" class="w3-bar-item w3-button button2">Student</a>
+        <a asp-action="LecLogin" asp-controller="Account" class="w3-bar-item w3-button button3">Lecturer</a>
+    </div>
+</div>

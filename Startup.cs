@@ -7,10 +7,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.EntityFrameworkCore;
-using OnlyPythonFYP.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using OnlyPythonFYP.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace OnlyPythonFYP
 {
@@ -36,10 +36,9 @@ namespace OnlyPythonFYP
                   .AddCookie("UserSecurity",
                      options =>
                      {
-                         options.LoginPath = "/Account/Login/";
+                         options.LoginPath = "/Home/Index/";
                          options.AccessDeniedPath = "/Account/Forbidden/";
                      });
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +48,7 @@ namespace OnlyPythonFYP
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseStaticFiles();
             app.UseAuthentication();
             app.UseMvc(
@@ -56,7 +56,7 @@ namespace OnlyPythonFYP
                {
                    routes.MapRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Login}/{id?}");
+                    template: "{controller=Home}/{action=Index}/{id?}");
                });
         }
     }

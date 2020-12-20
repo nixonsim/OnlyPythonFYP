@@ -21,6 +21,8 @@ namespace OnlyPythonFYP.Models
         public virtual DbSet<Qnsbank> Qnsbank { get; set; }
         public virtual DbSet<Qntemplate> Qntemplate { get; set; }
 
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Class>(entity =>
